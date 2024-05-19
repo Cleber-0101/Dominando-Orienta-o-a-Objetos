@@ -1,4 +1,9 @@
-﻿class Banda
+﻿
+
+//nome do projeto ou nome da empresa
+namespace ScreenSounds.Modelos;
+
+class Banda
 {
     private List<Album> albuns = new List<Album>();
     private List<int> notas = new List<int>();
