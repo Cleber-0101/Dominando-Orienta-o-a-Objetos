@@ -1,4 +1,7 @@
-﻿class Album
+﻿using ScreenSounds.Modelos;
+
+
+internal class Album
 {
     private List<Musica> musicas = new List<Musica>();
 

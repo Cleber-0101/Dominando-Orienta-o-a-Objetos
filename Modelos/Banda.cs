@@ -1,20 +1,24 @@
 ﻿
 
 //nome do projeto ou nome da empresa
+using ScreenSound.Modelos;
+
 namespace ScreenSounds.Modelos;
 
-class Banda
+internal class Banda
 {
     private List<Album> albuns = new List<Album>();
-    private List<int> notas = new List<int>();
+    private List<Avaliacao> notas = new List<Avaliacao>();
 
+
+    //construtores
     public Banda(string nome)
     {
         Nome = nome;
     }
 
     public string Nome { get; }
-    public double Media => notas.Average();
+    public double Media => notas.Average(a => a.Nota);
     public List<Album> Albuns => albuns;
 
     public void AdicionarAlbum(Album album) 
@@ -22,7 +26,7 @@ class Banda
         albuns.Add(album);
     }
 
-    public void AdicionarNota(int nota)
+    public void AdicionarNota(Avaliacao nota)
     {
         notas.Add(nota);
     }
